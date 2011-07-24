@@ -4,7 +4,7 @@ p. A simple and easily mockable .NET serializer.
 
 h2. Usage
 
-h3. XML Serialization/Desearilization
+h3. XML Serialization/Deserialization
 
 h4. Serialization
 
@@ -22,11 +22,11 @@ h4. Deserialization
 
 bc.. new XmlSerializer().FromXml<YourClassToBeDeserialized>(xml); // utf-8 as default encoding
 
-p. ory ou can pass another character encoding
+p. or you can pass another character encoding
 
 bc.. new XmlSerializer().FromXml<YourClassToBeDeserialized>(xml, Encoding.ASCII);
 
-h3. JSON Serialization/Desearilization
+h3. JSON Serialization/Deserialization
 
 h4. Serialization
 
