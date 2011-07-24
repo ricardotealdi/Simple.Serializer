@@ -1,0 +1,45 @@
+h1. Simple.Serializer
+
+p. A simple and easily mockable .NET serializer.
+
+h2. Usage
+
+h3. XML Serialization/Desearilization
+
+h4. Serialization
+
+bc.. new XmlSerializer().ToXml(yourObjectToBeSerializer); // utf-8 as default encoding
+
+p. or you can pass another character encoding
+
+bc.. new XmlSerializer().ToXml(yourObjectToBeSerializer, Encoding.ASCII);
+
+p. or you can pass another namespace for the xml
+
+bc.. new XmlSerializer().ToXml(yourObjectToBeSerializer, Encoding.ASCII, new XmlSerializerNamespaces());
+
+h4. Deserialization
+
+bc.. new XmlSerializer().FromXml<YourClassToBeDeserialized>(xml); // utf-8 as default encoding
+
+p. ory ou can pass another character encoding
+
+bc.. new XmlSerializer().FromXml<YourClassToBeDeserialized>(xml, Encoding.ASCII);
+
+h3. JSON Serialization/Desearilization
+
+h4. Serialization
+
+bc.. new JsonSerializer().ToJson(yourObjectToBeSerializer); // utf-8 as default encoding
+
+p. or you can pass another character encoding
+
+bc.. new JsonSerializer().ToJson(yourObjectToBeSerializer, Encoding.ASCII); // utf-8 as default encoding
+
+h4. Deserialization
+
+bc.. new JsonSerializer().FromJson<YourClassToBeDeserialized>(json); // utf-8 as default encoding
+
+p. or you can pass another character encoding
+
+bc.. new JsonSerializer().FromJson<YourClassToBeDeserialized>(json, Encoding.ASCII);
